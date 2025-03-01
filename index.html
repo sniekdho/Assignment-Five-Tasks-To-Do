@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/board.png" type="image/x-icon">
     <title>Tasks To Do</title>
 
     <!-- Google Poppins Font CDN -->
@@ -39,38 +40,254 @@
     </script>
 </head>
 
-<body class="font-poppins">
+<body class="font-poppins bg-[#f4f7ff]">
 
     <!-- Header Section -->
-    <header class="bg-[#f4f7ff] p-2">
-        <nav class="container m-auto p-3 bg-white rounded-xl mt-3">
+    <header class="p-2">
+        <nav class="container mx-auto p-3 bg-white rounded-xl mt-3">
 
             <div class="flex justify-between">
 
+                <!-- Navbar Left Portion -->
                 <div>
-                    <div class="flex items-center space-x-1 py-1">
+                    <div class="flex items-center space-x-2">
                         <img src="./assets/logo.png" alt="">
                         <h1 class="text-[#00303c] text-4xl">Dev<span class="font-bold">Board</span></h1>
                     </div>
                 </div>
-    
-    
-                <div class="flex items-center space-x-10">
-                    <div class="flex items-center space-x-4 p-2 rounded-2xl bg-[#f4f7ff]">
-                        <img src="./assets/checkbox.png" alt="">
-                        <h1 class="text-3xl font-bold">23</h1>
+                <!--  -->
+
+
+                <!-- Navbar Right Portion -->
+                <div class="flex items-center space-x-7">
+                    <div class="flex items-center gap-3 p-2 rounded-full bg-[#f4f7ff]">
+                        <img class="w-5" src="./assets/checkbox.png" alt="">
+                        <h1 id="completed-task-count" class="text-3xl font-bold">23</h1>
                     </div>
-    
-                    <div class="bg-[#f4f7ff] p-2 rounded-full">
-                        <img src="./assets/theme-btn.png" alt="">
+
+                    <div class="bg-[#f4f7ff] p-2 rounded-full cursor-pointer">
+                        <img class="w-8" src="./assets/theme-btn.png" alt="">
                     </div>
                 </div>
+                <!--  -->
 
             </div>
 
         </nav>
     </header>
+    <!--  -->
 
+
+    <!-- Main Section -->
+    <div class="container mx-auto py-2 grid grid-cols-4 gap-5">
+
+        <!-- Left Side Card -->
+        <div class="container mx-auto rounded-xl p-3 bg-white col-span-3">
+
+            <!-- Dashboard Cards -->
+            <div class="flex justify-evenly gap-3">
+
+                <!-- First Portion -->
+                <div class="flex items-center space-x-3 p-4 rounded-xl bg-[#f4f7ff]">
+                    <div class="p-2 rounded-full bg-white">
+                        <img class="w-5" src="./assets/checkbox.png" alt="">
+                    </div>
+
+                    <div>
+                        <p>Task Assigned</p>
+                        <p class="font-bold text-2xl">0<span id="assigned-task">6</span></p>
+                    </div>
+                </div>
+
+                <!-- Middle Portion -->
+                <div id="discovered"
+                    class="flex flex-1 items-center space-x-7 p-5 rounded-xl bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] cursor-pointer">
+                    <div>
+                        <img src="./assets/board.png" alt="">
+                    </div>
+
+                    <div>
+                        <p class="text-white">Discover Something New Today!</p>
+                    </div>
+                </div>
+
+                <!-- Third Portion -->
+                <div class="flex items-center space-x-3 p-5 rounded-xl bg-[#f4f7ff]">
+                    <div class="p-2 rounded-full bg-white">
+                        <img class="w-5" src="./assets/calender.png" alt="">
+                    </div>
+
+                    <div>
+                        <p>Sat<span class="font-bold">,</span></p>
+                        <p class="font-bold">Mar 01 2025</p>
+                    </div>
+                </div>
+
+            </div>
+            <!--  -->
+
+
+            <!-- Task Cards -->
+            <div class="grid grid-cols-3 gap-5 mt-12">
+
+                <!-- Card One -->
+                <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
+                    <p class="rounded-md p-2 w-fit bg-white">ShopEase</p>
+                    <h1 class="text-lg font-medium w-fit">Fix Mobile Button Issue</h1>
+                    <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
+                        check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <small class="text-sm">Deadline</small>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button id="task-one"
+                                class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Two -->
+                <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
+                    <p class="rounded-md p-2 w-fit bg-white">CloudSync</p>
+                    <h1 class="text-lg font-medium w-fit">Add Dark Mode</h1>
+                    <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
+                        check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <small class="text-sm">Deadline</small>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button id="task-two"
+                                class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Three -->
+                <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
+                    <p class="rounded-md p-2 w-fit bg-white">SwiftPay</p>
+                    <h1 class="text-lg font-medium w-fit">Optimize Home Page</h1>
+                    <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
+                        check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <small class="text-sm">Deadline</small>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button id="task-three"
+                                class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Four -->
+                <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
+                    <p class="rounded-md p-2 w-fit bg-white">Meta</p>
+                    <h1 class="text-lg font-medium w-fit">Add New Emoji</h1>
+                    <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
+                        check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <small class="text-sm">Deadline</small>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button id="task-four"
+                                class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Five -->
+                <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
+                    <p class="rounded-md p-2 w-fit bg-white">Google LLC</p>
+                    <h1 class="text-lg font-medium w-fit">Integrate OpenAI API</h1>
+                    <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
+                        check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <small class="text-sm">Deadline</small>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button id="task-five"
+                                class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Six -->
+                <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
+                    <p class="rounded-md p-2 w-fit bg-white">GlassDoor</p>
+                    <h1 class="text-lg font-medium w-fit">Improve Job Searching</h1>
+                    <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
+                        check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <small class="text-sm">Deadline</small>
+                            <p class="font-medium">21 March 2025</p>
+                        </div>
+                        <div>
+                            <button id="task-six"
+                                class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--  -->
+
+        </div>
+        <!--  -->
+
+
+        <!-- Right Side Card -->
+        <div class="container mx-auto rounded-xl p-2 bg-white col-span-1 h-full">
+
+            <!-- Activity Log -->
+            <div class="p-2 space-y-5">
+                <div class="flex space-x-3 justify-center">
+                    <img src="./assets/activity.png" alt="">
+                    <h1>Activity Log</h1>
+                </div>
+                <div class="justify-center text-center">
+                    <button class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Clear
+                        History</button>
+                </div>
+            </div>
+            <!--  -->
+
+            <!-- Descriptions -->
+            <div class="mt-10 space-y-5 m-5">
+                <p class="bg-[#f4f7ff] p-2 text-sm rounded-xl text-center">You have Complete The Task Add Dark Mode at
+                    12:48:15 PM</p>
+
+                <p class="bg-[#f4f7ff] p-2 text-sm rounded-xl text-center">You have Complete The Task Add Dark Mode at
+                    12:48:15 PM</p>
+            </div>
+            <!--  -->
+
+        </div>
+        <!--  -->
+
+    </div>
+    <!--  -->
+
+
+    <!-- Scripts Files -->
+    <script src="./js/completed_task_button.js"></script>
+
+    <script src="./js/discovered.js"></script>
 </body>
 
 </html>
