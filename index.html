@@ -95,12 +95,12 @@
 
                     <div>
                         <p>Task Assigned</p>
-                        <p class="font-bold text-2xl">0<span id="assigned-task">6</span></p>
+                        <p id="assigned-task" class="font-bold text-2xl">6</p>
                     </div>
                 </div>
 
                 <!-- Middle Portion -->
-                <div id="discovered"
+                <div id="blogs"
                     class="flex flex-1 items-center space-x-7 p-5 rounded-xl bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] cursor-pointer">
                     <div>
                         <img src="./assets/board.png" alt="">
@@ -190,7 +190,7 @@
                 <!-- Card Four -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">Meta</p>
-                    <h1 class="text-lg font-medium w-fit">Add New Emoji</h1>
+                    <h1 class="text-lg font-medium w-fit">Add New Emoji <i class="fa-solid fa-handshake-angle text-yellow-500"></i></h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
 
@@ -261,19 +261,15 @@
                     <h1>Activity Log</h1>
                 </div>
                 <div class="justify-center text-center">
-                    <button class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Clear
+                    <button id="clear-history" class="rounded-md p-2 px-5 bg-[#3752FD] text-white text-sm font-medium">Clear
                         History</button>
                 </div>
             </div>
             <!--  -->
 
             <!-- Descriptions -->
-            <div class="mt-10 space-y-5 m-5">
-                <p class="bg-[#f4f7ff] p-2 text-sm rounded-xl text-center">You have Complete The Task Add Dark Mode at
-                    12:48:15 PM</p>
-
-                <p class="bg-[#f4f7ff] p-2 text-sm rounded-xl text-center">You have Complete The Task Add Dark Mode at
-                    12:48:15 PM</p>
+            <div id="description-container" class="mt-10 space-y-5 m-5">
+                
             </div>
             <!--  -->
 
@@ -286,8 +282,6 @@
 
     <!-- Scripts Files -->
     <script src="./js/completed_task_button.js"></script>
-
-    <script src="./js/discovered.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Google Poppins Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/71d4fc89aa.js" crossorigin="anonymous"></script>
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Customize Config CDN -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        'poppins': ["Poppins", "sans-serif"]
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-poppins bg-[#f4f7ff]">
+
+    <header class="p-2">
+        <nav class="container mx-auto p-3 bg-white rounded-xl mt-3">
+
+            <div class="flex justify-between">
+
+                <!-- Navbar Left Portion -->
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <img src="./assets/logo.png" alt="">
+                        <h1 class="text-[#00303c] text-4xl">Dev<span class="font-bold">Board</span></h1>
+                    </div>
+                </div>
+                <!--  -->
+
+
+                <!-- Navbar Right Portion -->
+                <div class="flex items-center space-x-7">
+                    <button id="back-to-desk"
+                        class="rounded-md p-4 px-5 bg-[#3752FD] text-white text-sm font-medium">Back to Desk</button>
+                </div>
+                <!--  -->
+
+            </div>
+
+        </nav>
+    </header>
+
+    <h1 class="text-center text-2xl font-bold cursor-pointer">Blogs</h1>
+
+    <section class="p-2 space-y-5">
+        <div class="container mx-auto bg-white rounded-lg">
+            <h1 class="text-xl font-bold p-5">Question-1: What are the different ways to select an element in the DOM?</h1>
+            <hr class="border-dashed"></hr>
+            <p class="p-5">
+                There are multiple ways to select elements in the DOM.
+                <br>
+                1. getElementById()
+                <br>
+                2. getElementsByClassName()
+                <br>
+                3. getElementsByTagName()
+                <br>
+                4. querySelector()
+                <br>
+                5. querySelectorAll()
+            </p>
+            
+        </div>
+
+        <div class="container mx-auto bg-white rounded-lg">
+            <h1 class="text-xl font-bold p-5">Question-2: What is the difference between innerHTML, innerText, and textContent?</h1>
+            <hr class="border-dashed"></hr>
+            <p class="p-5">
+                innerHTML -- Recognizes HTML tags and renders the content according to the tags.
+                <br>
+                innerText -- Reads the content as it appears on the screen, ignores the hidden content.
+                <br>
+                textContent -- Reads content as it appears in the markup. It reads the hidden content also.
+            </p>
+        </div>
+
+        <div class="container mx-auto bg-white rounded-lg">
+            <h1 class="text-xl font-bold p-5">Question-3: What is event delegation in the DOM?</h1>
+            <hr class="border-dashed"></hr>
+            <p class="p-5">The system of not adding click event listener for each items and only add the click event listener to all items parent is known as event delegation.</p>
+        </div>
+
+        <div class="container mx-auto bg-white rounded-lg">
+            <h1 class="text-xl font-bold p-5">Question-4: What is event bubbling in the DOM?</h1>
+            <hr class="border-dashed"></hr>
+            <p class="p-5">In a nested elements, the click event which is triggered on the innermost element but the event is automatically triggered it's parents, grandparents and so on is known as event bubbling.</p>
+        </div>
+
+        <div class="container mx-auto bg-white rounded-lg">
+            <h1 class="text-xl font-bold p-5">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+            <hr class="border-dashed"></hr>
+            <p class="p-5">
+                For "create" an element using javaScript -- document.createElement('tagName') 
+                <br>
+                For "add" an element using javaScript -- first create a new element which will be treated as child element, then find the parent element where to add the new element. Finally use "appendChild()" method to add the child element with parent.
+                <br>
+                For "remove" an element using javaScript -- first select the parent element, then find that element which will be removed. Finally use "removeChild()" method to remove the element from parent.
+            </p>
+        </div>
+    </section>
+
+    <script src="./js/blogs.js"></script>
+</body>
+
+</html>
