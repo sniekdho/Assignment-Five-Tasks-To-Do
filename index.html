@@ -65,7 +65,7 @@
                         <h1 id="completed-task-count" class="text-3xl font-bold">23</h1>
                     </div>
 
-                    <div class="bg-[#f4f7ff] p-2 rounded-full cursor-pointer">
+                    <div id="change-theme" class="bg-[#f4f7ff] p-2 rounded-full cursor-pointer">
                         <img class="w-8" src="./assets/theme-btn.png" alt="">
                     </div>
                 </div>
@@ -118,13 +118,16 @@
                     </div>
 
                     <div>
-                        <p>Sat<span class="font-bold">,</span></p>
-                        <p class="font-bold">Mar 01 2025</p>
+                        <p id="week-day" class="text-2xl font-bold"></p>
+                        <p id="current-date" class="font-bold"></p>
                     </div>
                 </div>
 
             </div>
             <!--  -->
+
+
+            <hr class="border border-dashed mt-10"></hr>
 
 
             <!-- Task Cards -->
@@ -133,9 +136,11 @@
                 <!-- Card One -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">ShopEase</p>
-                    <h1 class="text-lg font-medium w-fit">Fix Mobile Button Issue</h1>
+                    <h1 class="title text-lg font-medium w-fit">Fix Mobile Button Issue</h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <hr class="border border-dashed"></hr>
 
                     <div class="flex justify-between items-center">
                         <div>
@@ -152,9 +157,11 @@
                 <!-- Card Two -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">CloudSync</p>
-                    <h1 class="text-lg font-medium w-fit">Add Dark Mode</h1>
+                    <h1 class="title text-lg font-medium w-fit">Add Dark Mode</h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <hr class="border border-dashed"></hr>
 
                     <div class="flex justify-between items-center">
                         <div>
@@ -171,9 +178,11 @@
                 <!-- Card Three -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">SwiftPay</p>
-                    <h1 class="text-lg font-medium w-fit">Optimize Home Page</h1>
+                    <h1 class="title text-lg font-medium w-fit">Optimize Home Page</h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <hr class="border border-dashed"></hr>
 
                     <div class="flex justify-between items-center">
                         <div>
@@ -190,9 +199,11 @@
                 <!-- Card Four -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">Meta</p>
-                    <h1 class="text-lg font-medium w-fit">Add New Emoji <i class="fa-solid fa-handshake-angle text-yellow-500"></i></h1>
+                    <h1 class="title text-lg font-medium w-fit">Add New Emoji <i class="fa-solid fa-handshake-angle text-yellow-500"></i></h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <hr class="border border-dashed"></hr>
 
                     <div class="flex justify-between items-center">
                         <div>
@@ -209,9 +220,11 @@
                 <!-- Card Five -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">Google LLC</p>
-                    <h1 class="text-lg font-medium w-fit">Integrate OpenAI API</h1>
+                    <h1 class="title text-lg font-medium w-fit">Integrate OpenAI API</h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <hr class="border border-dashed"></hr>
 
                     <div class="flex justify-between items-center">
                         <div>
@@ -228,9 +241,11 @@
                 <!-- Card Six -->
                 <div class="bg-[#f4f7ff] rounded-xl p-5 space-y-5">
                     <p class="rounded-md p-2 w-fit bg-white">GlassDoor</p>
-                    <h1 class="text-lg font-medium w-fit">Improve Job Searching</h1>
+                    <h1 class="title text-lg font-medium w-fit">Improve Job Searching</h1>
                     <p class="rounded-md p-2 bg-white text-sm text-[#8c8c8c] text-justify">Debug using Chrome DevTools,
                         check for overlapping elements, and ensure onClick works properly and ensure onClick works.</p>
+
+                    <hr class="border border-dashed"></hr>
 
                     <div class="flex justify-between items-center">
                         <div>
@@ -266,6 +281,8 @@
                 </div>
             </div>
             <!--  -->
+
+            <hr class="border border-dashed mt-5"></hr>
 
             <!-- Descriptions -->
             <div id="description-container" class="mt-10 space-y-5 m-5">
